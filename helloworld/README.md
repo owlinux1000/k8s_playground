@@ -10,6 +10,8 @@
   * ```~/.kube/config``` の設定を使う(?)
 * eval (minikube docker-env)
   * Minikube VMによりDockerをホスティングする
+* docker build -t を kubenetesの設定が効いた状態で行う
+  * **eval(minikube docker-env)をする前のimageは、eval後では見つからない**
 * kubectl run hello-node --image=hello-node:v1 --port=8080
   * hello-node:v1のDockerコンテナを内部ポート8080がつながるようにして起動する
   * hello-nodeというPodを立ち上げていることを意味してる(?)
