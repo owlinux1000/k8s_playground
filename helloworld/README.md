@@ -12,6 +12,8 @@
   * Minikube VMによりDockerをホスティングする
 * kubectl run hello-node --image=hello-node:v1 --port=8080
   * hello-node:v1のDockerコンテナを内部ポート8080がつながるようにして起動する
+  * hello-nodeというPodを立ち上げていることを意味してる(?)
+  * --replicas=3 とかで複数Podsを立ち上げることができる
 * kubectl get deployments
   * Deploymentの情報を見る
 * kubectl get pods
@@ -19,7 +21,6 @@
 * kubectl expose deployment hello-node --type=LoadBalancer  
 * minikube service hello-node  
   * Serviceを作って外部からアクセスできるようにする
-
 ここまでやるとブラウザからアクセスできるようになる
 * server.jsに編集を加えて更新したら、dockerの方も:v2を作成する
 * kubectl set image deployment/hello-node hello-node=hello-node:v2
